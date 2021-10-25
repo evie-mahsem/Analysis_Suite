@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <style type="text/css">
+      .top h1 {
+          font-weight: Bold;
+          font-size: 35px;
+          text-align: center;
+          margin: 0;
+      }
+      .top h2 {
+          font-weight: lighter;
+          font-size: 20px;
+          text-align: center;
+          margin: 0;
+      }
+      tr {
+          text-align: center;
+      }
+      .autoResizeImage {
+          max-width: 100%;
+          height: auto;
+          width: auto;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="resize.js"></script>
+  </head>
+
+  <div id="header" class="top" style="text-align:center;">
+    <h1 id="page-title"> </h1>
+    <a href="..">[back]</a>
+    <br>
+    <div id="channels" class="top" style="text-align: center;"></div>
+  </div>
+
+  <body onresize="resizeImages()">
+    <table><tbody id="picTable"></tbody></table>
+  </body>
+
+
+  <script>
+    setupHeader();
+    setupImages();
+  </script>
+</html>
